@@ -11,6 +11,7 @@ public class TopicSender {
     private RabbitTemplate rabbitTemplate;
 
     public void send(String msg) {
+        System.out.println("生产者生产消息 ======== 消息内容如下：  "+msg);
         rabbitTemplate.convertAndSend(RabbitTopicConfig.TOPIC_EXCHANGE, RabbitTopicConfig.TOPIC_BINDING_1, msg);
     }
 

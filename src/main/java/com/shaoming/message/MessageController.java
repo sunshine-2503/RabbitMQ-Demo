@@ -14,14 +14,12 @@ public class MessageController {
     private TopicSender topicSender;
 
 
-    @GetMapping("/send1")
+    @GetMapping("/send")
     public String send1() {
         for (int i = 0; i < 10; i++) {
-            String msg = "第"+i+"条消息：哈哈哈哈！";
-            System.out.println("发送 ====== 第"+i+"条消息：哈哈哈哈！");
-            topicSender.send(msg);
+            topicSender.send("第"+i+"条消息：哈哈哈哈！");
         }
-        System.out.println("=========================================");
+        System.out.println("=======================================================");
         return "success";
     }
 
