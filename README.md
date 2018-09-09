@@ -220,7 +220,7 @@ public class MessageController {
 实现方式：首先由生产者生产一条消息 ——> 通过 TopicExchange 推送到不同队列中  ——> 每个队列由不同的消费者消费
 通过这种方式就可以实现由生产者生产的一条消息被多个消费者消费。
 具体配置方式请看：RabbitTopicConfig.java 以及 TopicReceiver.java
-TopicReceiver.java 中的绑定：分别将【两个不同的队列】用【同一个绑定值】绑定到【同一个交换机】
+RabbitTopicConfig.java 中的绑定：分别将【两个不同的队列】用【同一个绑定值】绑定到【同一个交换机】
 TopicReceiver.java 中消费的队列。每个消费者消费不同的消费队列。
 ```
 
