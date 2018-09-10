@@ -15,4 +15,5 @@ public class TopicReceiver {
     public void processMessage2(String msg) {
         System.out.println("消费者 2 ======== 消费消息：  "+msg);
     }
+
 }

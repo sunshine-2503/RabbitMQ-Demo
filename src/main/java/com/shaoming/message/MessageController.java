@@ -15,7 +15,7 @@ public class MessageController {
 
 
     @GetMapping("/send")
-    public String send1() {
+    public String send() {
         for (int i = 0; i < 10; i++) {
             topicSender.send("第"+i+"条消息：哈哈哈哈！");
         }
